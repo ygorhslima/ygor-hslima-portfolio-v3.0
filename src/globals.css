@@ -1,0 +1,205 @@
+:root {
+  /* Tons de fundo mais limpos */
+  --fundo-principal: #e2e4e6; /* Um off-white (Slate 50) que reduz a fadiga visual */
+  --fundo-secundario: #edeeef; /* Azulado bem leve para áreas de apoio */
+
+  --fundo-menu: #edeeefb7;
+  --texto-menu: black;
+
+  /* Tipografia com melhor legibilidade (menos cinza, mais contraste) */
+  --texto: #0f172a; /* Azul marinho profundo quase preto */
+  --texto-suave: #64748b; /* Para textos secundários */
+  --texto-inverso: #ffffff;
+
+  /* Cores de Destaque (Brand) */
+  --destaque: #4f46e5; /* Indigo vibrante (mais moderno que o azul padrão) */
+  --destaque-hover: #4338ca;
+  --destaque-inverso: #eef2ff; /* Fundo para badges ou botões suaves */
+
+  /* Componentes */
+  --fundo-card: #ffffff;
+  --borda-card: #e2e8f0; /* Essencial para separar card do fundo */
+  --header: rgba(255, 255, 255, 0.85);
+  --aside: #1e293b;
+}
+
+.escuro {
+  --fundo-principal: #0d1117; /* Slightly darker, more GitHub-like dark */
+  --fundo-secundario: #161b22; /* More distinct from main background */
+  --fundo-menu: #161b22c0;
+  --texto-menu: white;
+  --texto: #c9d1d9; /* Softer white for readability */
+  --texto-suave: #8b949e; /* Better contrast for secondary text */
+  --texto-inverso: #0d1117;
+  --destaque: #58a6ff; /* Brighter blue for dark mode accent */
+  --destaque-hover: #388bfd; /* Slightly darker blue for hover */
+  --destaque-inverso: #010409; /* Darker background for badges/buttons */
+  --fundo-card: #161b22; /* Card background same as secondary for consistency */
+  --borda-card: #30363d; /* Clearer border for cards */
+  --aside: #ffffff;
+  --header: rgba(22, 27, 34, 0.9); /* More opaque header */
+  --aside: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Changed to Inter, a modern sans-serif */
+  font-size: 16px; /* Slightly larger base font size */
+  line-height: 1.6; /* Espaçamento entre linhas maior traz "ar" ao design */
+  -webkit-font-smoothing: antialiased; /* Deixa a fonte mais nítida em Mac/iOS */
+
+  background-color: var(--fundo-principal);
+  color: var(--texto);
+}
+
+/* Agrupando seletores com o mesmo padding */
+header,
+#formacao,
+#projetos,
+#skills,
+#ficha,
+#sobre {
+  padding: 40px 10%;
+  width: 100%;
+}
+
+#sobre {
+  margin-top: 10px;
+}
+
+article {
+  background-color: var(--fundo-card);
+  margin-bottom: 20px;
+  border-radius: 12px; /* Slightly more rounded corners */
+  padding: 20px; /* Adicionado para o texto não colar na borda */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition:
+    transform 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out; /* Smooth transitions */
+}
+
+article h2 {
+  color: var(--destaque);
+  margin-bottom: 15px; /* Increased margin for better separation */
+}
+
+/* New styles for strong tags */
+strong {
+  color: var(--destaque); /* Make bold text stand out more */
+  font-weight: 600; /* Ensure it's bold */
+}
+
+/* Styling for the "Ver certificado" button */
+.certificados button {
+  background-color: var(--destaque);
+  color: var(--texto-inverso); /* White text on accent color */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px; /* More rounded */
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  font-weight: 500;
+  margin-top: 10px; /* Add some space above the button */
+}
+
+.certificados button:hover {
+  background-color: var(--destaque-hover);
+  transform: translateY(-2px);
+}
+
+/* Styling for project details (summary/details tag) */
+.projeto-info details {
+  margin-top: 15px; /* Add some space */
+  border: 1px solid var(--borda-card); /* Add a subtle border */
+  border-radius: 8px;
+  padding: 10px;
+  background-color: var(--fundo-secundario); /* Slightly different background */
+  color: var(--texto);
+}
+
+.projeto-info summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: var(--destaque); /* Make it look like a link */
+  outline: none; /* Remove default outline on focus */
+}
+
+.projeto-info details p {
+  margin-top: 10px;
+  padding-left: 10px; /* Indent the detailed description */
+  border-left: 2px solid var(--destaque); /* Visual cue for expanded content */
+  color: var(--texto-suave);
+}
+
+/* Container de vídeo otimizado */
+.video-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social a {
+  color: var(--destaque);
+  font-size: 1.5em;
+  transition:
+    transform 0.3s,
+    color 0.3s;
+}
+
+.social a:hover {
+  color: var(--destaque);
+  transform: scale(1.2);
+}
+
+#botao-tema {
+  border: none;
+  background-color: var(--fundo-secundario);
+  color: var(--texto);
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#botao-tema:hover {
+  background-color: var(--destaque);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  header,
+  #formacao,
+  #projetos,
+  #skills,
+  #ficha,
+  #sobre {
+    padding: 30px 5%;
+  }
+}
