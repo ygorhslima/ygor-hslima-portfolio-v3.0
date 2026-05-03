@@ -16,7 +16,7 @@ export const listaCertificado = [
     curso: "Algoritmo [40 horas]",
     instituicao: "Curso em vídeo",
     data_emissao: "21 de junho de 2024",
-    link: "/pdfs/algoritmo.pdf",
+    link: "/ygor-hslima-portfolio-v3.0/pdfs/algoritmo.pdf",
   },
   {
     curso: "MySQL [40 horas]",
