@@ -1,14 +1,23 @@
-"use client";
-
 import { PAGES } from "@/core/constants/pages";
 import { listaBlog } from "@/core/utils/listaBlog";
-import { useParams, redirect } from "next/navigation";
+import { redirect } from "next/navigation";
 
+// Esta função diz ao Next.js quais IDs existem para gerar os arquivos estáticos
+export async function generateStaticParams() {
+  return listaBlog.map((post) => ({
+    id: post.id.toString(),
+  }));
+}
 
-export default function BlogDetail() {
-  const params = useParams();
-  const id = params?.id;
-  const post = listaBlog.find((item) => item.id === (typeof id === "string" ? parseInt(id) : -1));
+interface BlogDetailProps {
+  params: Promise<{ id: string }>;
+}
+
+export default async function BlogDetail({ params }: BlogDetailProps) {
+  const { id } = await params;
+  const post = listaBlog.find(
+    (item) => item.id === (typeof id === "string" ? parseInt(id) : -1),
+  );
 
   if (!post) {
     redirect(PAGES.BLOG);
