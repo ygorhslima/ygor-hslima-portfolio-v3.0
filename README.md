@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Histórico de Versões - Portfólio Ygor Henrique
 
-## Getting Started
+Este documento detalha a evolução do meu portfólio, as tecnologias implementadas e as melhorias em cada etapa do desenvolvimento.
 
-First, run the development server:
+---
+## [v2.0] - Maio 2026 
+    **mudança geral de arquitetura e framework**: mudança do projeto utilizando o Vite para NextJS, utilizando as facilidades do framework do Next para uso de SSR e principalmente SSG para a parte do blog, visando ter mais eficiência no portfólio, e sem problemas de roteamento
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## [v1.2] - Março/Abril 2026
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **mudança geral no layout**: estruturei o layout do site, criando o layoutWrapper que engloba o header, o sidebar e o main (que engloba todos os componentes do site),
+- **Mobile First:** criação de `Sidebar` interativa e Menu Hambúrguer para dispositivos móveis.
+- **SEO e Performance:** Otimização de tags semânticas e carregamento de assets.
+- **Roteamento:** Implementação do `react-router-dom` para gerenciar a navegação entre `/home` e outras rotas futuras dentro do site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## [v1.1] - Fevereiro 2026
+- **wallpaper dinâmico**: na seção ficha, implementei a funcionalidade de wallpaper dinâmico ao clicar no botão de mudar tema
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## [v1.0] - Janeiro 2026
+- **Certificados:** Criação de componente de Modal para visualização de PDFs de certificados sem sair do site.
+- **Lógica inicial para o Modo Dark**: a partir do uso do useEffect alterando a classe de escuro para claro dependendo do estado
+- **estilização dos componentes**: aqui foquei em transições suaves em componentes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## [v.alpha] - Dezembro 2025
+- **Lançamento Inicial:** Estrutura básica do projeto
+- **Componentes principais:** Sobre mim, Formação, Projetos e Contato.
+- **Hospedagem:** Deploy inicial no GitHub Pages.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🛠️ Tecnologias Utilizadas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Frontend:** React.js, JavaScript (ES6+), HTML5, CSS3.
+- **Navegação:** React Router.
+- **Ícones:** FontAwesome, Lucide Icons.
+- **Design:** Design Responsivo (Mobile First), Dark Mode.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📈 Próximos Passos (Backlog)
+- [x] Criar uma nova aba de blogs
+- [ ] Adicionar suporte a múltiplos idiomas (I18n).
+
+---
+
+## instalações
+
+### Font Awesome
+npm install @fortawesome/free-solid-svg-icons
+npm install @fortawesome/free-regular-svg-icons
+npm install @fortawesome/free-brands-svg-icons
+
+
+
+**LINK DO PROJETO**: https://ygorhslima.github.io/ygor-hslima-portfolio-v3.0/home

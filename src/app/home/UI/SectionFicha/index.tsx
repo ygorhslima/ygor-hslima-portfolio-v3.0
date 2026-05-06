@@ -5,7 +5,10 @@ import WallpaperNoite from "@/core/assets/imgs/wallpaper-night-800.jpg";
 import Image from "next/image";
 import Link from "next/link";
 
-const curriculo = "./curriculo.pdf";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFile, faPaperPlane } from "@fortawesome/free-regular-svg-icons";
+
 interface Props {
   temaEscuro: boolean;
 }
@@ -38,7 +41,7 @@ export default function SectionFicha({ temaEscuro }: Props) {
           target="_blank"
           rel="nofollow"
         >
-          <i className="fa-brands fa-linkedin"></i>
+          <FontAwesomeIcon icon={faLinkedin} />
         </Link>
 
         <Link
@@ -46,21 +49,21 @@ export default function SectionFicha({ temaEscuro }: Props) {
           target="_blank"
           rel="nofollow"
         >
-          <i className="fa-brands fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </Link>
 
         <Link
-          href={curriculo}
+          href={'./curriculo.pdf'}
           target="_blank"
           rel="external"
           type="application/pdf"
         >
-          <i className="fa-solid fa-file"></i>
+          <FontAwesomeIcon icon={faFile} />
         </Link>
 
-        <Link href="mailto:ygorlima.dev06@gmail.com">
-          <i className="fa-solid fa-paper-plane"></i>
-        </Link>
+        <a href="mailto:ygorlima.dev06@gmail.com">
+          <FontAwesomeIcon icon={faPaperPlane} />
+        </a>
         <br />
       </div>
     </section>

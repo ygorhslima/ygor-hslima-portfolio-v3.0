@@ -31,9 +31,11 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
           {post.titulo}
         </h1>
         <div className="sobre-content">
-          <p className="sobre-paragrafo" style={{ whiteSpace: "pre-wrap" }}>
-            {post.conteudo}
-          </p>
+          <div
+            dangerouslySetInnerHTML={{ __html: post.conteudo }}
+            className="sobre-paragrafo"
+            style={{ whiteSpace: "pre-wrap" }}
+          />
         </div>
       </article>
     </section>
