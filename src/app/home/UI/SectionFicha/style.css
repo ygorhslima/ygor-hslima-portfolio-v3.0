@@ -19,10 +19,9 @@
   border-radius: 20px;
 }
 
-/* --- Imagem/Foto --- */
 #ficha #content img.foto {
   width: 200px;
-  height: 200px; /* Força a altura para manter o círculo perfeito */
+  height: 200px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
@@ -30,26 +29,67 @@
   outline: 5px solid var(--destaque);
   display: block;
   margin: 0 auto 20px auto;
-  transition: 0.4s;
+  transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #ficha #content img.foto:hover {
-  transform: scale(1.1);
-  box-shadow: 1px 1px 20px black;
+  transform: scale(1.2);
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.5);
 }
 
-/* --- Bloco de Texto --- */
 #ficha #content .text {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   gap: 10px;
   margin: 20px;
 }
 
+#name,
+#description {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--destaque);
+  display: inline-block;
+}
+
+#name {
+  width: 0;
+  animation:
+    typing-fluid 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    blink 0.8s step-end infinite;
+}
+
+#description {
+  width: 0;
+  opacity: 0;
+  animation:
+    typing-fluid 3.5s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    blink 0.8s step-end infinite;
+  animation-delay: 1.8s;
+}
+
+@keyframes typing-fluid {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+    border-color: transparent;
+  }
+}
+
+/* Cursor piscante clássico */
+@keyframes blink {
+  from, to { border-color: transparent }
+  50% { border-color: var(--destaque); }
+}
+
 #ficha #content .text h1 {
   color: var(--destaque);
-  margin: 15px;
+  margin: 15px 0;
   font-size: 50px;
   text-align: left;
 }
@@ -63,7 +103,7 @@
 /* --- Media Query (Mobile) --- */
 @media (max-width: 768px) {
   #ficha {
-    padding: 20px; /* Reduzi o padding exagerado para telas pequenas */
+    padding: 20px;
   }
 
   #ficha #content {
@@ -74,7 +114,7 @@
 
   #ficha #content img.foto {
     width: 150px;
-    height: 150px; /* Ajusta a altura também no mobile */
+    height: 150px;
     margin-bottom: 10px;
   }
 
@@ -82,20 +122,24 @@
     width: 100%;
     margin: 10px 0;
     text-align: center;
+    align-items: center; /* Centraliza as divs de texto */
   }
 
   #ficha #content .text h1 {
     font-size: 30px;
     text-align: center;
-    margin: 10px 0;
   }
 
-  #ficha #content .text p {
-    line-height: 1.5em;
+  #name, #description {
+    white-space: normal;
+    border-right: none;
+    width: 100%;
+    opacity: 1;
+    animation: fadeIn 1s ease-in;
   }
+}
 
-  #ficha #social {
-    margin-top: 10px;
-    font-size: 1.2em;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

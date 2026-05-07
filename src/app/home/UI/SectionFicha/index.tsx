@@ -27,8 +27,8 @@ export default function SectionFicha({ temaEscuro }: Props) {
       <div id="content">
         <Image src={imgPerfil} alt="img-perfil" className="foto" />
         <div className="text">
-          <h1>Ygor Henrique</h1>
-          <p>
+          <h1 id="name">Ygor Henrique</h1>
+          <p id="description">
             Desenvolvedor Front-End focado em criar experiências digitais
             modernas e responsivas
           </p>
@@ -53,7 +53,7 @@ export default function SectionFicha({ temaEscuro }: Props) {
         </Link>
 
         <Link
-          href={'./curriculo.pdf'}
+          href={"./curriculo.pdf"}
           target="_blank"
           rel="external"
           type="application/pdf"

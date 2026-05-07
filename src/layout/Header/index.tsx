@@ -9,10 +9,7 @@ interface PropsHeader {
   onToggleMenu: () => void;
 }
 
-export default function Header({
-  onToggleMenu
-}: PropsHeader) {
-
+export default function Header({ onToggleMenu }: PropsHeader) {
   const { temaEscuro, setTemaEscuro } = useTheme();
 
   return (
@@ -21,18 +18,9 @@ export default function Header({
         <MenuHamburguer onClick={onToggleMenu} />
       </div>
       <h1>Portfolio</h1>
+      
       <button id="botao-tema" onClick={() => setTemaEscuro(!temaEscuro)}>
-        {temaEscuro ? (
-          <>
-            <Moon/>
-            <p>Modo Claro</p>
-          </>
-        ) : (
-          <>
-            <Sun/>
-            <p>Modo Escuro</p>
-          </>
-        )}
+        {temaEscuro ? <Moon /> : <Sun />}
       </button>
     </header>
   );
