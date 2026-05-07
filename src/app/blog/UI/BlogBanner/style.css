@@ -6,7 +6,7 @@
   backdrop-filter: blur(4px);
   padding: 140px;
 
-  background-image: url("../../../../core/assets/imgs/blog-banner-wallpaper-500.jpg");
+  background-image: url("../../../../core/assets/imgs/blog-banner-wallpaper.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -17,13 +17,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
-  margin: 0px;
-  padding: 10px;
-  border-radius: 20px;
+  width: 50%;
   color: white;
   text-align: center;
-  font-size: 25px;
+  font-size: 17px;
 }
 
 #ficha-blog #content-blog img.foto {
@@ -55,7 +52,6 @@
 #ficha-blog #content-blog .text h1 {
   color: var(--destaque);
   margin: 15px;
-  font-size: 50px;
   text-align: left;
 }
 
