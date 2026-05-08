@@ -7,8 +7,8 @@ import reactImg from "../assets/svgs/react.svg";
 import gitImg from "../assets/svgs/git.svg";
 import linuxImg from "../assets/svgs/linux.svg";
 import dockerImg from '../assets/svgs/docker.svg';
-import nodeImg from '../assets/svgs/nodejs.svg';
-import nextImg from '../assets/svgs/next.svg';
+import csharpImg from '../assets/svgs/csharp.svg';
+import nextImg from '../assets/svgs/nextjs.svg';
 
 
 
@@ -44,8 +44,8 @@ export const listaHardSkills = [
     link:"https://nextjs.org/"
   },
   {
-    img:nodeImg,
-    text:"NodeJS",
+    img:csharpImg,
+    text:"C-sharp",
     link:"https://nodejs.org/pt-br"
   },
   {
