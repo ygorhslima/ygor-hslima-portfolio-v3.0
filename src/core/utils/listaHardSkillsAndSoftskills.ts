@@ -7,6 +7,9 @@ import reactImg from "../assets/svgs/react.svg";
 import gitImg from "../assets/svgs/git.svg";
 import linuxImg from "../assets/svgs/linux.svg";
 import dockerImg from '../assets/svgs/docker.svg';
+import nodeImg from '../assets/svgs/nodejs.svg';
+import nextImg from '../assets/svgs/next.svg';
+
 
 
 export const listaHardSkills = [
@@ -36,6 +39,16 @@ export const listaHardSkills = [
     link: "https://pt-br.react.dev/",
   },
   {
+    img: nextImg,
+    text:"NextJS",
+    link:"https://nextjs.org/"
+  },
+  {
+    img:nodeImg,
+    text:"NodeJS",
+    link:"https://nodejs.org/pt-br"
+  },
+  {
     img: mysqlImg,
     text: "MySQL",
     link: "https://dev.mysql.com/doc/",
@@ -54,7 +67,7 @@ export const listaHardSkills = [
     img: dockerImg,
     text: "Docker",
     link:"https://docs.docker.com/"
-  }
+  },
 ];
 
 export const listaSoftSkills = [
