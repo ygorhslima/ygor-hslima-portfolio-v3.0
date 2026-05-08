@@ -46,7 +46,7 @@ export const listaHardSkills = [
   {
     img:csharpImg,
     text:"C-sharp",
-    link:"https://nodejs.org/pt-br"
+    link:"https://dotnet.microsoft.com/pt-br/languages/csharp"
   },
   {
     img: mysqlImg,
